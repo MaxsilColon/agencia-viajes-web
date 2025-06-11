@@ -1,13 +1,39 @@
-.carrouselComp {
-  width: 100%;
-  height: 100%;
+
+.carrousel-container {
   position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
   overflow: hidden;
+  margin: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
-.carrouselComp img {
+.carrousel-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  display: block;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-button.left {
+  left: 0;
+}
+
+.nav-button.right {
+  right: 0;
 }
