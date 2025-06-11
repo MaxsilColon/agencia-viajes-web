@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import PrincipalPage from './Views/PrincipalPage'
 import NavBar from './Components/NavBar'
+import Footer from './Components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +18,7 @@ function App() {
   </main>
 
   <footer className="layout__footer">
-    {/* Puedes agregar contenido aquí, como enlaces, contacto, etc. */}
+    <Footer/>
   </footer>
 </div>
 

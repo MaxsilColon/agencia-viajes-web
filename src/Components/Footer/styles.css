@@ -1,0 +1,32 @@
+.footer {
+    height: 100px;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #111; 
+  color: #fff;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+
+.coming-soon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #f0c040; 
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
