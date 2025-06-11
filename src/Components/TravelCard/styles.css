@@ -1,0 +1,47 @@
+.travelCard{
+    width: 370px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+.travelCard .titleTravel{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+.travelCard .imageTravel{
+    margin-top: 5px;
+    height: 270px;
+    width: 100%;
+    padding: 10px;
+}
+.travelCard .imageTravel img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.travelCard .travelDescription{
+    max-height: 150px;
+    width: 100%;
+    padding: 10px;
+    color: gray;
+    font-size: 20px;
+    overflow: scroll;
+    scrollbar-color: orange;
+    scrollbar-width: none;
+}
+.travelCard .dateAndPrice{
+    width: 100%;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+    padding: 10px;
+}
+.travelCard .button{
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+}
