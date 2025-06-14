@@ -25,6 +25,7 @@ export default function TravelCard({ item }) {
       </div>
       <div className="button">
         <Button
+        className='buttonComp'
           onClick={() => handleNavigation("/travelDetails", item)}
           text="Ver mas detalles"
         />

@@ -1,7 +1,9 @@
 import Carrousel from "../../Components/Carrousel";
 import "./index.css";
-import { viajes } from "../../data/viajes";
+import { viajes, GalleryData } from "../../data/viajes";
 import TravelCard from "../../Components/TravelCard";
+import Service from "../../Components/Services";
+import Gallery from "../../Components/Gallery";
 
 export default function PrincipalPage() {
 const hoy = new Date().toLocaleDateString("en-CA", {
@@ -16,8 +18,11 @@ const fechaHoy = new Date(hoy);
   return (
     <div className="fatherPrincipalPage">
       <div className="carrousel">
-        <Carrousel />
+        <Carrousel/>
       </div>
+      <section className="services">
+        <Service/>
+      </section>
       <section className="proximosViaje">
         <div className="tiltePv">
           <p>Proximos Viajes</p>
@@ -43,6 +48,9 @@ const fechaHoy = new Date(hoy);
             }
           })}
         </div>
+      </section>
+      <section className="sectionGallery">
+        <Gallery media={GalleryData}/>
       </section>
     </div>
   );

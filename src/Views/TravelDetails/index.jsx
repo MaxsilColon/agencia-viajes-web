@@ -2,16 +2,34 @@ import { useEffect, useState } from "react";
 import "./styles.css";
 import { useLocation } from "react-router";
 import InformationCard from "../../Components/InformationCard";
+import WhatsAppButton from "../../Components/ButtonWhatsapp";
 
 export default function TravelDetails() {
   const [travelDetails, setTravelDetails] = useState({});
   const { state } = useLocation();
+  const [image, setImage] = useState([]);
 
   useEffect(() => {
     if (state?.objeto) {
       setTravelDetails(state?.objeto);
     }
+
+    let array = [
+      state?.objeto?.mainImage,
+      ...(state?.objeto?.gallery?.flat() || []),
+    ];
+    setImage(array);
   }, [state?.objeto]);
+
+  const handleImagePosition = (index) => {
+    setImage((prevState) => {
+      const newState = [...prevState];
+      const temp = newState[0];
+      newState[0] = newState[index];
+      newState[index] = temp;
+      return newState;
+    });
+  };
 
   return (
     <div className="fatherTravelDetails">
@@ -47,25 +65,23 @@ export default function TravelDetails() {
 
       <section className="imageAndPrice">
         <div className="mainImageContainer">
-          <img src={travelDetails?.mainImage} alt="Destino" />
+          <img src={image[0]} alt="Destino" />
         </div>
 
         <div className="gallerySection">
-          {travelDetails?.gallery?.map((img, index) => (
-            <img key={index} src={img} alt={`Galería ${index + 1}`} />
+          {image?.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              onClick={() => handleImagePosition(index)}
+              alt={`Galería ${index + 1}`}
+            />
           ))}
         </div>
 
         <div className="priceAndAction">
-          <span className="price">RD$ {travelDetails?.price}</span>
-          <a
-            className="whatsappButton"
-            href={`https://wa.me/18096946393?text=Hola! Estoy interesado en el viaje a ${travelDetails?.destination}, Fecha: ${travelDetails?.date}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Reservar por WhatsApp
-          </a>
+          <span className="price">{travelDetails?.price}</span>
+           <WhatsAppButton specificTrip={true} destination={travelDetails?.destination} date={travelDetails?.date}/>
         </div>
       </section>
     </div>

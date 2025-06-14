@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TravelDetails from "./Views/TravelDetails";
 import ScrollToTop from "./Components/ScrollTop";
+import Services from "./Views/services";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<PrincipalPage />} />
             <Route path="/travelDetails" element={<TravelDetails />} />
+            <Route path="/services" element={<Services />} />
           </Routes>
         </main>
 

@@ -1,0 +1,18 @@
+.serviceCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+.serviceCard:hover {
+  transform: scale(1.03);
+}
+
+.serviceCard h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #0b3d91;
+}

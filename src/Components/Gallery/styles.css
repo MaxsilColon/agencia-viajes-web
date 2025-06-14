@@ -1,0 +1,31 @@
+.galleryContainer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: black;
+}
+.galleryContainer .displayGallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+.displayGallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.displayGallery::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.displayGallery .galleryItem {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}

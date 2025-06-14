@@ -1,0 +1,77 @@
+.fatherServices {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+.fatherServices .titleName {
+  height: 120px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.fatherServices .titleName .text1 {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: black;
+}
+.fatherServices .titleName .text2 {
+  font-size: 70px;
+  font-style: italic;
+  font-weight: bold;
+  color: green;
+}
+
+.eslogan {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.eslogan span {
+  display: block;
+  font-size: 20px;
+  color: #444;
+  font-weight: 500;
+}
+
+.eslogan .subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.serviceList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.serviceItem {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.serviceItem:hover {
+  transform: scale(1.03);
+}
+
