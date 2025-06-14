@@ -1,7 +1,7 @@
 import './styles.css'
 
-export default function Button({text, onChange}){
+export default function Button({text, onClick}){
     return(
-        <button className='buttonComp'>{text}</button>
+        <button onClick={onClick} className='buttonComp'>{text}</button>
     )
 }

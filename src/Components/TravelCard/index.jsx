@@ -1,7 +1,13 @@
 import Button from "../Button";
 import "./styles.css";
-
+import { useNavigate } from "react-router";
 export default function TravelCard({ item }) {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path, item) => {
+    navigate(path, { state: { objeto: item } });
+  };
+
   return (
     <div className="travelCard">
       <div className="titleTravel">
@@ -18,7 +24,10 @@ export default function TravelCard({ item }) {
         <span>Desde: ${item.price}</span>
       </div>
       <div className="button">
-        <Button text="Ver mas detalles"/>
+        <Button
+          onClick={() => handleNavigation("/travelDetails", item)}
+          text="Ver mas detalles"
+        />
       </div>
     </div>
   );

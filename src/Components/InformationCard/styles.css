@@ -1,0 +1,23 @@
+.card-info {
+  width: 150px;
+  height: 60px;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info .label {
+  font-size: 0.80rem;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.card-info .text {
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: 500;
+}
