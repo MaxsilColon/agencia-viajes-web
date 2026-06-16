@@ -12,6 +12,7 @@
     padding: 10px;
 }
 .travelCard .imageTravel{
+    position: relative;
     margin-top: 5px;
     height: 270px;
     width: 100%;

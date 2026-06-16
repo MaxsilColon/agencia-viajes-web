@@ -1,5 +1,8 @@
+"use client";
+
+import Image from "next/image";
 import { useState } from "react";
-import "./styles.css";
+import { getPublicAssetPath } from "../../utils/assets";
 
 const images = [
   "/caption.jpg",
@@ -28,10 +31,13 @@ export default function Carrousel() {
         ‹
       </button>
 
-      <img
-        src={images[currentIndex]}
+      <Image
+        src={getPublicAssetPath(images[currentIndex])}
         alt={`Imagen ${currentIndex + 1}`}
         className="carrousel-image"
+        fill
+        priority={currentIndex === 0}
+        sizes="(max-width: 600px) 100vw, 600px"
       />
 
       <button className="nav-button right" onClick={goNext}>

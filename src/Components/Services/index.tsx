@@ -1,21 +1,15 @@
+"use client";
+
 import Button from "../Button";
-import "./styles.css";
-import { useNavigate } from "react-router";
+import { useRouter } from "next/navigation";
 
 export default function Service() {
-
-
-      const navigate = useNavigate();
-
-  const handleNavigation = (path) => {
-    navigate(path);
-  };
-
+  const router = useRouter();
 
   return (
     <div className="fatherServices">
       <div className="titleName">
-        <span className="text1">D' Liam ☀️😎</span>
+        <span className="text1">{"D' Liam ☀️😎"}</span>
         <span className="text2">TOURS</span>
       </div>
 
@@ -31,7 +25,11 @@ export default function Service() {
         <div className="serviceItem">🎉 Eventos y celebraciones</div>
       </div>
 
-      <Button onClick={()=> handleNavigation('/services')} className='viewMore' text='Ver todos los servicios'/>
+      <Button
+        onClick={() => router.push("/services")}
+        className="viewMore"
+        text="Ver todos los servicios"
+      />
     </div>
   );
 }

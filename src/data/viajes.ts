@@ -1,4 +1,27 @@
-export const viajes = [
+export type Viaje = {
+  id: string;
+  destination: string;
+  description: string;
+  date: string;
+  departurePlace: string;
+  departureTime: string;
+  returnTime: string;
+  price: string;
+  mainImage: string;
+  gallery: string[];
+  includes: string[];
+  notIncluded: string[];
+  whatsappContact: string;
+  status: "disponible" | "agotado";
+  category: string;
+};
+
+export type GalleryItem = {
+  type: "video" | "image";
+  src: string;
+};
+
+export const viajes: Viaje[] = [
   {
     id: "1",
     destination: "Bahía de las Águilas",
@@ -90,7 +113,7 @@ export const viajes = [
   },
 ];
 
-export const GalleryData = [
+export const GalleryData: GalleryItem[] = [
   {
     type: "video",
     src: "RdTravels.mp4",
