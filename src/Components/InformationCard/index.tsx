@@ -1,6 +1,9 @@
-import "./styles.css";
+type InformationCardProps = {
+  label: string;
+  text?: string;
+};
 
-export default function InformationCard({ label, text }) {
+export default function InformationCard({ label, text }: InformationCardProps) {
   return (
     <div className="card-info">
       <span className="label">{label ?? ""}:</span>

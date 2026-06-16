@@ -1,4 +1,3 @@
-import "./styles.css";
 import WhatsAppButton from "../../Components/ButtonWhatsapp";
 import ServiceCard from "../../Components/ServiceCard";
 
@@ -7,7 +6,7 @@ export default function Services() {
     <div className="servicesPage">
       <h1 className="servicesTitle">Nuestros Servicios</h1>
       <p className="servicesIntro">
-        En <strong>D' Liam TOURS</strong> ofrecemos transporte privado con
+        En <strong>{"D' Liam TOURS"}</strong> ofrecemos transporte privado con
         comodidad, puntualidad y seguridad. Estos son algunos de los servicios
         que brindamos:
       </p>

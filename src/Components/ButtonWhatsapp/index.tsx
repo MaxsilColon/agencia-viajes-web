@@ -1,6 +1,14 @@
-import "./styles.css";
+type WhatsAppButtonProps = {
+  specificTrip?: boolean;
+  destination?: string;
+  date?: string;
+};
 
-export default function WhatsAppButton({ specificTrip, destination, date }) {
+export default function WhatsAppButton({
+  specificTrip,
+  destination,
+  date,
+}: WhatsAppButtonProps) {
   return (
     <a
       href={
